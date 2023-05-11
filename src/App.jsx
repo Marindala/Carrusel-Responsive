@@ -13,13 +13,14 @@ const Titulo = styled.p`
 	text-transform: uppercase;
 	margin-bottom: 10px;
 `;
-
+//código repetido ohh nooo
 
 function App() {
   
 
   return (
     <main>
+		
       <Titulo>Experiencia Código</Titulo>
 			<Slides controles={true}>
 				<Slide>
