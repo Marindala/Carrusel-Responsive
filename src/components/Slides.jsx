@@ -3,7 +3,10 @@
 export const Slides = () => {
   return (
     <div>
-      <h1>Slides</h1>
+      <div>
+        <a href="https://portfolio-marina-marindala.netlify.app/"></a>
+      </div>
+      <div>Slides</div>
       </div>
   )
 }
