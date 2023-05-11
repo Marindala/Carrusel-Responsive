@@ -91,7 +91,7 @@ export const Slides = ({
       <ContenedorSlideshow ref={slideshow}>{children}</ContenedorSlideshow>
       {controles && (
         <Controles>
-          <Boton onClick={anterior}>
+          <Boton onClick={siguiente}>
             <div>
               <svg
                 width="24"
@@ -104,7 +104,7 @@ export const Slides = ({
               </svg>
             </div>
           </Boton>
-          <Boton derecho onClick={siguiente}>
+          <Boton derecho onClick={anterior}>
             <>
               {/*  {" "} */}
               <svg

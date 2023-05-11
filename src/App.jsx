@@ -51,7 +51,7 @@ function App() {
 						<img src={img4} alt=""/>
 					</a>
 					<TextoSlide>
-						<p>Experiencia Código</p>
+						<p></p>
 					</TextoSlide>
 				</Slide>
 			</Slides>
