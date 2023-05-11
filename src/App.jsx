@@ -1,83 +1,55 @@
-
-import './App.css' 
-import { Slides, Slide, TextoSlide } from './components/Slides'
-import styled from 'styled-components';
-import img1 from './assets/Slide1.jpg';
-import img2 from './assets/Slide2.jpg';
-import img3 from './assets/Slide3.jpg';
-import img4 from './assets/Slide4.jpg';
+import "./App.css";
+import { Slides, Slide, TextoSlide } from "./components/Slides";
+import styled from "styled-components";
+import data from "./data";
 
 const Titulo = styled.p`
-	font-size: 40px;
-	font-weight: 900;
-	text-transform: uppercase;
-	margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 `;
 //código repetido ohh nooo
 
 function App() {
-  
-
   return (
     <main>
-		
       <Titulo>Experiencia Código</Titulo>
-			<Slides controles={true}>
-				<Slide>
-					<a href="https://portfolio-marina-marindala.netlify.app/#home">
-						<img src={img1} alt=""/>
-					</a>
-					<TextoSlide>
-						<p></p>
-					</TextoSlide>
-				</Slide>
-				<Slide>
-					<a href="https://portfolio-marina-marindala.netlify.app/#home">
-						<img src={img2} alt=""/>
-					</a>
-					<TextoSlide>
-						<p></p>
-					</TextoSlide>
-				</Slide>
-				<Slide>
-					<a href="https://portfolio-marina-marindala.netlify.app/#home">
-						<img src={img3} alt=""/>
-					</a>
-					<TextoSlide>
-						<p></p>
-					</TextoSlide>
-				</Slide>
-				<Slide>
-					<a href="https://portfolio-marina-marindala.netlify.app/#home">
-						<img src={img4} alt=""/>
-					</a>
-					<TextoSlide>
-						<p></p>
-					</TextoSlide>
-				</Slide>
-			</Slides>
+      <Slides controles={true}>
+        {data.map(({ img, alt, src }, i) => (
+          <Slide key={i}>
+            <a href={src}>
+              <img src={img} alt={alt} />
+            </a>
+          </Slide>
+        ))}
 
-			<Titulo>Mejora tú Código </Titulo>
-			<Slides controles={true} autoplay={true} velocidad="3000" intervalo="5000">
-				<Slide>
-					<a href="https://portfolio-marina-marindala.netlify.app/#home">
-						<img src={img1} alt=""/>
-					</a>
-					<TextoSlide >
-			
-					</TextoSlide>
-				</Slide>
-				<Slide>
-					<a href="https://portfolio-marina-marindala.netlify.app/#home">
-						<img src={img2} alt=""/>
-					</a>
-					<TextoSlide>
-						
-					</TextoSlide>
-				</Slide>
-			</Slides>
+        <TextoSlide>
+          <p></p>
+        </TextoSlide>
+      </Slides>
+
+      <Titulo>Mejora tú Código </Titulo>
+      <Slides
+        controles={true}
+        autoplay={true}
+        velocidad="3000"
+        intervalo="5000"
+      >
+        {data.map(({ img, alt, src }, i) => (
+          <Slide key={i}>
+            <a href={src}>
+              <img src={img} alt={alt} />
+            </a>
+          </Slide>
+        ))}
+
+        <TextoSlide>
+          <p></p>
+        </TextoSlide>
+      </Slides>
     </main>
-  )
+  );
 }
 
-export default App
+export default App;

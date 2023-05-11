@@ -104,7 +104,7 @@ export const Slides = ({
               </svg>
             </div>
           </Boton>
-          <Boton derecho onClick={anterior}>
+          <Boton derecho="true" onClick={anterior}>
             <>
               {/*  {" "} */}
               <svg
