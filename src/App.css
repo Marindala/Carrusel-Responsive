@@ -1,8 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron:wght@500&family=Press+Start+2P&family=Rubik+Vinyl&family=Share+Tech+Mono&display=swap');
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+body{
+  background-color: #eef08bb5;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 20px;
+}
+
+main{
+  max-width: 1000px;
+  margin: 50px auto;
+	overflow: hidden;
 }
 
 .logo {
