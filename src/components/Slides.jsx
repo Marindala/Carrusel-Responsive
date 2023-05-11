@@ -156,7 +156,7 @@ const TextoSlide = styled.div`
 
   @media screen and (max-width: 700px) {
     position: relative;
-    background: #000;
+    background: #eeef9bb5;
   }
 `;
 
