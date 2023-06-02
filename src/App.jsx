@@ -2,6 +2,7 @@ import "./App.css";
 import { Slides, Slide, TextoSlide } from "./components/Slides";
 import styled from "styled-components";
 import data from "./data";
+import Navbar from "./components/Navbar";
 
 const Titulo = styled.p`
   font-size: 40px;
@@ -14,6 +15,7 @@ const Titulo = styled.p`
 function App() {
   return (
     <main>
+      <Navbar/>
       <Titulo>Experiencia Código</Titulo>
       <Slides controles={true}>
         {data.map(({ img, alt, src }, i) => (
