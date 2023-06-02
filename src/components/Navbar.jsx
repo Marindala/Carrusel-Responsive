@@ -78,18 +78,26 @@ const Navbar = () => {
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
 
+  const handleAvatarClick = () => {
+    const confirmExit = window.confirm(
+      "¿Estás seguro que deseas salir de la página?"
+    );
+    if (confirmExit) {
+      window.open("https://www.linkedin.com/in/marina~lopez/", "_blank");
+    }
+  };
+
   return (
     <Container>
       <Wrapper>
         <Left>
           {" "}
-          <a
-            href="https://www.linkedin.com/in/marina~lopez/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <Avatar src={img} alt="Avatar" />
-          </a>
+          <Avatar
+            src={img}
+            alt="Avatar"
+            onClick={handleAvatarClick}
+            style={{ cursor: "pointer" }}
+          />
           <Menu
             style={{ cursor: "pointer" }}
             className={click ? "nav-menu.active" : "nav-menu"}
