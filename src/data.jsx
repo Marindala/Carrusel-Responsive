@@ -2,6 +2,7 @@ import img1 from "./assets/Slide1.jpg";
 import img2 from "./assets/Slide2.jpg";
 import img3 from "./assets/Slide3.jpg";
 import img4 from "./assets/Slide4.jpg";
+import img5 from "./assets/Slide5.jpg";
 
 const data = [
   {
@@ -27,6 +28,12 @@ const data = [
     img: img4,
     alt: "Image 4",
     src: "https://www.instagram.com/marina_lopez_marilo/",
+},
+{
+    id: 5,
+    img: img5,
+    alt: "Image 5",
+    src: "https://www.linkedin.com/in/marina~lopez/",
 },
 ];
 
