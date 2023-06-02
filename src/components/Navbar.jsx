@@ -4,79 +4,79 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import styled from "styled-components";
 import img from "../assets/Mi.png";
 
-const Navbar = () => {
-  const [click, setClick] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const openModal = () => setModalOpen(true);
-  const closeModal = () => setModalOpen(false);
-
-  const Container = styled.div`
-    margin: 0;
-    width: 100px;
-    height: 100px;
+const Container = styled.div`
+  margin: 0;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: #eeef9bb5;
+  @media screen and (max-width: 770px) {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    overflow: hidden;
-    margin-bottom: 20px;
-    background-color: #eeef9bb5;
-    @media screen and (max-width: 770px) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  `;
+  }
+`;
 
-  const Wrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-item: center;
-    @media screen and (max-width: 770px) {
-      width: 100%;
-      display: flex;
-      align-item: center;
-      justify-content: space-between;
-    }
-  `;
-
-  const Left = styled.div`
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-item: center;
+  @media screen and (max-width: 770px) {
     width: 100%;
     display: flex;
     align-item: center;
     justify-content: space-between;
-    text-align: center;
-  `;
-  const Right = styled.div`
-    @media screen and (max-width: 770px) {
-      display: flex;
-    }
-  `;
+  }
+`;
 
-  const Avatar = styled.img`
-    height: 100px;
-    width: 100px;
-    margin.top: 60px;
-    border-radius: 100%;
-    cursor: pointer;
-    justify-content: space-between;
-    display: inline-block;
-
-    @media screen and (max-width: 770px) {
-      display: none;
-      text-align: center;
-    }
-  `;
-  const Menu = styled.ul`
+const Left = styled.div`
+  width: 100%;
+  display: flex;
+  align-item: center;
+  justify-content: space-between;
+  text-align: center;
+`;
+const Right = styled.div`
+  @media screen and (max-width: 770px) {
     display: flex;
-    list-style: none;
-    @media screen and (max-width: 770px) {
-      height: 40px;
-      display: flex;
-      align-items: center;
-      left: 0;
-    }
-  `;
+  }
+`;
+
+const Avatar = styled.img`
+  height: 100px;
+  width: 100px;
+  margin.top: 60px;
+  border-radius: 100%;
+  cursor: pointer;
+  justify-content: space-between;
+  display: inline-block;
+
+  @media screen and (max-width: 770px) {
+    display: none;
+    text-align: center;
+  }
+`;
+const Menu = styled.ul`
+  display: flex;
+  list-style: none;
+  @media screen and (max-width: 770px) {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    left: 0;
+  }
+`;
+
+const Navbar = () => {
+  const [click] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
 
   return (
     <Container>
