@@ -14,8 +14,7 @@ const Navbar = () => {
   const Container = styled.div`
     heigth: 80px;
     width: 100%;
-    border-bottom: white 3px dashed;
-    background-color: rgb(75, 2, 58);
+    background-color:#eeef9bb5;
     @media screen and (max-width: 770px) {
       display: flex;
       justify-content: space-between;
@@ -77,7 +76,7 @@ display: inline-block;
   `;
 
   return (
-    <Container id="home">
+    <Container>
       <Wrapper>
         <Left>
           {" "}
