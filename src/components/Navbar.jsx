@@ -12,18 +12,23 @@ const Navbar = () => {
   const closeModal = () => setModalOpen(false);
 
   const Container = styled.div`
-    heigth: 80px;
-    width: 100%;
-    background-color:#eeef9bb5;
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: #eeef9bb5;
     @media screen and (max-width: 770px) {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
     }
   `;
 
   const Wrapper = styled.div`
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-item: center;
@@ -40,6 +45,7 @@ const Navbar = () => {
     display: flex;
     align-item: center;
     justify-content: space-between;
+    text-align: center;
   `;
   const Right = styled.div`
     @media screen and (max-width: 770px) {
@@ -48,22 +54,19 @@ const Navbar = () => {
   `;
 
   const Avatar = styled.img`
-height: 200px;
-width: 200px;
-margin.top: 60px;
-border-radius: 100%;
-cursor: pointer;
-justify-content: space-between;
-display: inline-block;
+    height: 100px;
+    width: 100px;
+    margin.top: 60px;
+    border-radius: 100%;
+    cursor: pointer;
+    justify-content: space-between;
+    display: inline-block;
 
-@keyframes spin {
-    0% {
-      transform: rotateZ(1140deg);
+    @media screen and (max-width: 770px) {
+      display: none;
+      text-align: center;
     }
-@media screen and (max-width: 770px) {
-  display: none;
-  }
-`;
+  `;
   const Menu = styled.ul`
     display: flex;
     list-style: none;
@@ -80,7 +83,11 @@ display: inline-block;
       <Wrapper>
         <Left>
           {" "}
-          <a href="#home">
+          <a
+            href="https://www.linkedin.com/in/marina~lopez/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             <Avatar src={img} alt="Avatar" />
           </a>
           <Menu
@@ -109,7 +116,12 @@ display: inline-block;
               <Modal.Body>
                 <ul>
                   <li>
-                    <a href="/#Contact" className="modal-link">
+                    <a
+                      href="https://www.linkedin.com/in/marina~lopez/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="modal-link"
+                    >
                       Contact
                     </a>
                   </li>

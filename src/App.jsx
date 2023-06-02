@@ -15,7 +15,10 @@ const Titulo = styled.p`
 function App() {
   return (
     <main>
+      <div>
       <Navbar/>
+      </div>
+      <br></br>
       <Titulo>Experiencia Código</Titulo>
       <Slides controles={true}>
         {data.map(({ img, alt, src }, i) => (
